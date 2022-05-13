@@ -102,9 +102,11 @@ img{
 }
 
 /* ハンバーガーメニューを押したらメニューが表示される様にしよう！(答え) */
-/* .header .navigation.is-open{
-  right: 0;
-} */
+.header .navigation.is-open{
+  /* right: 0; */
+  right: -50%;
+  top: 100px;
+}
 
 .header .navigation .item{
   padding: 10px 0;
@@ -162,18 +164,21 @@ img{
 
 .fadeUp{
   animation-name: fadeUpAnime;
-  animation-duration: 1s;
+  /* animation-duration: 1s; */
+  animation-duration: 1ms;
   animation-fill-mode: forwards;
 }
 
 @keyframes fadeUpAnime{
   /* コンテンツを下からふわっと表示させよう！(答え) */
-  /* from{
+  from{
+    /* transform: translateY(100px); */
     opacity: 0;
-    transform: translateY(100px);
+    transform:rotateY(0deg);
   }
   to{
+    /* transform: translateY(0); */
     opacity: 1;
-    transform: translateY(0);
-  } */
+    transform:rotateY(120deg);
+  }
 }
